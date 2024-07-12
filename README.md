@@ -1,4 +1,4 @@
-![RSSfeed](https://github.com/dmitryporotnikov/unofficial_azure_updates/actions/workflows/generate_feed/badge.svg)
+![RSSfeed](https://github.com/dmitryporotnikov/unofficial_azure_updates/actions/workflows/generate_feed.yml/badge.svg)
 
 # Unofficial RSS feed for Azure Updates page
 
