@@ -31,9 +31,11 @@ jobs:
         path: azure_updates_feed.xml
         retention-days: 5  # Keeps the artifact for 5 days
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .
-        keep_files: true
+    - name: Update latest feed file
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        cp azure_updates_feed.xml latest_feed.xml
+        git add latest_feed.xml
+        git commit -m "Update latest feed" || echo "No changes to commit"
+        git push
